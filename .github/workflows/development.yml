@@ -34,3 +34,6 @@ jobs:
         with:
           name: PojavLauncher.dSYM
           path: artifacts/PojavLauncher.dSYM
+
+      - name: Manual cleanup
+        run: sudo rm -rf artifacts Natives/build
