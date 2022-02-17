@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Development build
-    runs-on: dore-dingusvm
+    runs-on: dingusteam
     steps:
       - name: Set up build environment pt. I
         uses: actions/checkout@v2
