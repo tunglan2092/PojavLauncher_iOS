@@ -8,7 +8,12 @@ jobs:
     name: Development build
     runs-on: dore-dingusvm
     steps:
+      - name: Set up build environment pt. I
+        uses: actions/checkout@v2
 
+      - name: Set up build environment pt. II
+        run: git submodule update --init --recursive
+        
       - name: Build the Debian package
         run: gmake -j$(sysctl -n hw.ncpu) dsym
 
